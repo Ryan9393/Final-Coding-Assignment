@@ -21,12 +21,12 @@ function App() {
           <Nav className="me-auto">
           <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
           <Nav.Link as={Link} to={"/about"}>About</Nav.Link>
-          <Nav.Link as={Link} to={"/profile"}>Profile</Nav.Link>
+          <Nav.Link as={Link} to={"/profile"}>Houses</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

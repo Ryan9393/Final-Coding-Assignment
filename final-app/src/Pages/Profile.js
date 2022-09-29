@@ -1,7 +1,14 @@
-import React from "react";
+import React, { Component } from 'react';
+import { HousesList } from '../Components/HousesList';
 
-function Profile(){
-    return <div>THIS IS THE Profile PAGE</div>
+class Profile extends Component {
+    render() {
+        return (
+            <div>
+                <HousesList/>
+            </div>
+        )
+    }
 }
 
 export default Profile;
