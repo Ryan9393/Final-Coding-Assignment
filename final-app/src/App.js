@@ -4,7 +4,6 @@ import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 import About from "./Pages/About";
 import Home from "./Pages/Home";
 import Profile from "./Pages/Profile";
-import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
@@ -13,8 +12,7 @@ function App() {
 
   return (
     <Router>
-          <Navbar bg="light" expand="lg">
-      <Container>
+          <Navbar className="m-1" bg="light" expand="lg">
         <Navbar.Brand href="#home"><h3>NavBar</h3></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -24,7 +22,6 @@ function App() {
           <Nav.Link as={Link} to={"/profile"}>Houses</Nav.Link>
           </Nav>
         </Navbar.Collapse>
-      </Container>
     </Navbar>
 
       <Routes>

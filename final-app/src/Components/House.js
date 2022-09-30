@@ -1,5 +1,10 @@
 import React from 'react';
 import { NewRoomForm } from './NewRoomForm.js';
+import Button from 'react-bootstrap/Button';
+import Container from "react-bootstrap/esm/Container";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 
 
 export const House = (props) => {
@@ -18,22 +23,29 @@ export const House = (props) => {
     const rooms = () => (
         <ul>
             {house.rooms.map((room, index) => (
-                <li key = {index}>
+                <li className="m-2" key = {index}>
                     <label> {`${room.name} Area: ${room.area}`} </label>
-                    <button onClick={(e) => deleteRoom(room._id)}>Delete</button>
+                    <Button variant="danger" className="m-2" onClick={(e) => deleteRoom(room._id)}>Delete</Button>
                 </li>
             ))}
         </ul>
     );
 
     return (
-        <div>
-            <h1>{house.name}</h1>
+        <div className='app'>
+        <Container>
+        <Row>
+            <Col className="m-2">
+            <h1 className="m-2">{house.name}</h1>
             {
                 rooms({ rooms, houseId: house._id, deleteRoom})
             }
             <NewRoomForm addNewRoom={addNewRoom}/>
-        </div>
+
+        </Col>
+        </Row>
+      </Container>
+      </div>
     );
     
 };

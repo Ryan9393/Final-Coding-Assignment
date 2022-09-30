@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import Container from "react-bootstrap/esm/Container";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 export const NewRoomForm = (props) => {
     const [name, setName] = useState('');
@@ -21,23 +26,30 @@ export const NewRoomForm = (props) => {
     }
 
     return (
+        <Container>
+            <Row>
+                <Col>
         <div>
             <h4>Add a new room</h4>
-            <form onSubmit={onSubmit}>
-                <input
+            <Form onSubmit={onSubmit} className="">
+                <Form.Control className="mb-3"
                     type= 'text'
                     placeholder= 'name'
                     onChange={(e) => setName(e.target.value)}
                     value={name}
                 />
-                <input
+                <Form.Control className="mb-3"
                     type= 'text'
                     placeholder = 'area'
                     onChange={handleAreaInput}
                     value={area}
                 />
-                <button type='submit'> add Room</button>
-            </form>
+                <Button variant="primary" type='submit'> Add Room</Button>
+            </Form>
         </div>
+        </Col>
+
+        </Row>
+      </Container>
     )
 };
