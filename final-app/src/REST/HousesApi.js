@@ -1,4 +1,4 @@
-const HOUSES_ENDPOINT = 'https://ancient-taiga-31359.herokuapp.com/api/houses';
+const HOUSES_ENDPOINT = 'http://localhost:3001/api/houses';
 
 class HousesApi {
     get = async () => {

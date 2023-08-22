@@ -17,7 +17,7 @@ export const NewRoomForm = (props) => {
     const onSubmit = (e) => {
         e.preventDefault();
         if (name && area) {
-            props.addNewRoom({name, area});
+            props.addNewRoom({name, area, _id: Math.random().toString().slice(2) });
             setName('');
             setArea('');
         } else {
